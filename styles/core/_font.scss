@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Londrina Outline';
+    src: url('../Fonts/LondrinaOutline-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../Fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900; /* Faixa de pesos variáveis */
+  }
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('../Fonts/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 100 900; /* Faixa de pesos variáveis */
+  }

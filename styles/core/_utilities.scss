@@ -1,0 +1,41 @@
+.u-border--green {
+    border-color: rgba(110, 164, 79, 0.3) !important;
+}
+
+.u-border--dashed {
+    border-style: dashed !important;
+}
+
+.u-text--20 {
+    font-size: 20px;
+    line-height: 28.5px;
+    letter-spacing: 2.28%;
+}
+
+.u-text--14 {
+    font-size: 14px;
+}
+
+.u-text--bold {
+    font-weight: bold;
+}
+
+.u-text--medium {
+    font-weight: 500;
+}
+
+.u-text--purple {
+    color: #6E22B5;
+}
+
+.u-background--green:hover {
+    background-color: #6EA44F !important;
+    img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+.u-link--right {
+    display: flex;
+    justify-content: end;
+}

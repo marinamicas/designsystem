@@ -1,0 +1,23 @@
+.t-main {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content;
+    grid-template-areas: 
+        "t-header"
+        "t-page"
+        "t-footer"
+    ;
+    height: calc(100vh - 20px);
+}
+
+.t-header {
+    grid-area: t-header;
+}
+
+.t-page {
+    grid-area: t-page;
+}
+
+.t-footer {
+    grid-area: t-footer;
+}

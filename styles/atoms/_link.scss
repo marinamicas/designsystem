@@ -1,0 +1,19 @@
+a {
+    color: #6E22B5;
+    text-decoration: underline;
+
+    &:visited {
+        color: #6E22B5;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: #6E22B5;
+        text-decoration: underline;
+    }
+
+    &:hover {
+        color: #3C1363;
+        text-decoration: underline;
+    }
+}

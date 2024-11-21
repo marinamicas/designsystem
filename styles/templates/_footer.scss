@@ -1,0 +1,18 @@
+.t-footer {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+        "t-image__triangle--left t-text"
+    ;
+    justify-content: stretch;
+    align-items: end;
+    padding: 20px 20px 20px 10px;
+}
+
+.t-image__triangle--left {
+    grid-area: t-image__triangle--left;
+}
+
+.t-text {
+    grid-area: t-text;
+}

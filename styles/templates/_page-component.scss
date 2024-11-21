@@ -1,0 +1,42 @@
+.t-page-component {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-areas: 
+        "t-button t-icon"
+        "t-chip t-card"
+    ;
+    grid-gap: 20px;
+    align-items: end;
+    justify-content: center;
+    align-content: center;
+
+    @media only screen and (max-width: 1023px) {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "t-button"
+            "t-icon"
+            "t-chip"
+            "t-card"
+        ;
+    }
+}
+
+.t-button {
+    grid-area: t-button;
+    text-decoration: none !important;
+}
+
+.t-icon {
+    grid-area: t-icon;
+    text-decoration: none !important;
+}
+
+.t-chip {
+    grid-area: t-chip;
+    text-decoration: none !important;
+}
+
+.t-card {
+    grid-area: t-card;
+    text-decoration: none !important;
+}

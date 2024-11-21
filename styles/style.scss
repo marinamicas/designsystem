@@ -1,0 +1,14 @@
+/* Configurações básicas */
+@use 'core';
+
+/* Classes individuais e elementos pequenos e reutilizáveis */
+@use 'atoms';
+
+/* Cria um elemento 'pai' para modificar os átomos */
+@use 'molecules';
+
+/* Estruturas maiores do projeto, que podem modificar átomos e moléculas */
+@use 'organisms';
+
+/* Sistemas de grids e alinhamentos de organismos */
+@use 'templates';

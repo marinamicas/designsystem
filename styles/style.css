@@ -1,0 +1,409 @@
+@charset "UTF-8";
+/* Configurações básicas */
+.u-border--green {
+  border-color: rgba(110, 164, 79, 0.3) !important;
+}
+
+.u-border--dashed {
+  border-style: dashed !important;
+}
+
+.u-text--20 {
+  font-size: 20px;
+  line-height: 28.5px;
+  letter-spacing: 2.28%;
+}
+
+.u-text--14 {
+  font-size: 14px;
+}
+
+.u-text--bold {
+  font-weight: bold;
+}
+
+.u-text--medium {
+  font-weight: 500;
+}
+
+.u-text--purple {
+  color: #6E22B5;
+}
+
+.u-background--green:hover {
+  background-color: #6EA44F !important;
+}
+.u-background--green:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.u-link--right {
+  display: flex;
+  justify-content: end;
+}
+
+@font-face {
+  font-family: "Londrina Outline";
+  src: url("../Fonts/LondrinaOutline-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../Fonts/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100 900; /* Faixa de pesos variáveis */
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("../Fonts/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+  font-style: italic;
+  font-weight: 100 900; /* Faixa de pesos variáveis */
+}
+/* Classes individuais e elementos pequenos e reutilizáveis */
+body, p {
+  font-family: "Raleway";
+}
+
+.a-title {
+  font-size: 36px;
+  font-weight: 300;
+  color: #6E22B5;
+  line-height: 43.5px;
+  letter-spacing: 2.28%;
+}
+
+a {
+  color: #6E22B5;
+  text-decoration: underline;
+}
+a:visited {
+  color: #6E22B5;
+  text-decoration: underline;
+}
+a:active {
+  color: #6E22B5;
+  text-decoration: underline;
+}
+a:hover {
+  color: #3C1363;
+  text-decoration: underline;
+}
+
+/* Cria um elemento 'pai' para modificar os átomos */
+.m-button {
+  border: 6px solid #F3EAFC;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background-color: #ffffff;
+  font-family: "Londrina Outline";
+  font-weight: bold;
+  color: #6E22B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.m-button--big {
+  width: 386px;
+  height: 201px;
+  font-size: 48px;
+}
+@media only screen and (max-width: 400px) {
+  .m-button--big {
+    width: 100%;
+    height: 100%;
+  }
+}
+.m-button--small {
+  width: 185px;
+  height: 58px;
+  font-size: 24px;
+}
+.m-button:hover {
+  background-color: #6E22B5;
+  border: 6px solid #6E22B5;
+  color: #ffffff;
+  font-weight: 500;
+}
+.m-button:hover a {
+  color: #ffffff;
+}
+
+.m-button--active {
+  border: 6px solid #F3EAFC;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background-color: #F3EAFC;
+  font-family: "Londrina Outline";
+  font-weight: bold;
+  color: #6E22B5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 185px;
+  height: 58px;
+  font-size: 24px;
+}
+
+.m-button--active--green {
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  background-color: rgba(110, 164, 79, 0.3);
+  font-family: "Londrina Outline";
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 185px;
+  height: 58px;
+  font-size: 24px;
+}
+.m-button--active--green img {
+  filter: contrast(75%) brightness(75%);
+}
+
+/* Estruturas maiores do projeto, que podem modificar átomos e moléculas */
+.o-tabs {
+  display: flex;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.o-tab {
+  padding: 10px 20px;
+  border: none;
+  font-weight: 600;
+}
+
+input[type=radio]:not(:checked) + .o-tab:hover {
+  background-color: #6E22B5;
+  border-radius: 9px 9px 0 0;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]:checked + label {
+  background-color: #F3EAFC;
+  border: none;
+  border-radius: 9px 9px 0 0;
+  font-weight: 600;
+}
+
+.o-content {
+  border-top: 1px solid #6E22B5;
+  padding: 15px;
+}
+
+.o-tab-content {
+  display: none;
+}
+
+.o-tabs:has(#tab1:checked) ~ .o-content .o-tab-content-1,
+.o-tabs:has(#tab2:checked) ~ .o-content .o-tab-content-2 {
+  display: block;
+}
+
+/* Sistemas de grids e alinhamentos de organismos */
+.t-main {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: max-content;
+  grid-template-areas: "t-header" "t-page" "t-footer";
+  height: calc(100vh - 20px);
+}
+
+.t-header {
+  grid-area: t-header;
+}
+
+.t-page {
+  grid-area: t-page;
+}
+
+.t-footer {
+  grid-area: t-footer;
+}
+
+.t-header--start {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: "t-title t-image__triangle--right";
+  margin: 20px;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 1023px) {
+  .t-header--start {
+    grid-template-columns: auto;
+    grid-template-areas: "t-title";
+  }
+}
+
+.t-title {
+  grid-area: t-title;
+}
+
+.t-image__triangle--right {
+  grid-area: t-image__triangle--right;
+}
+
+.t-header--navigation {
+  display: grid;
+  grid-template-columns: 1fr repeat(3, max-content) 2fr auto;
+  grid-template-areas: "t-image--navigation t-button__estilos--navigation t-button__padroes--navigation t-button__componentes--navigation . t-image__triangle--right--navigation";
+  grid-gap: 20px;
+  height: max-content;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 800px) {
+  .t-header--navigation {
+    grid-template-columns: repeat(3, max-content);
+    grid-template-areas: "t-image--navigation t-button__estilos--navigation ." "t-button__padroes--navigation t-button__componentes--navigation t-image__triangle--right--navigation";
+  }
+}
+@media only screen and (max-width: 615px) {
+  .t-header--navigation {
+    grid-template-columns: repeat(2, max-content);
+    grid-template-areas: "t-image--navigation ." "t-button__estilos--navigation t-button__padroes--navigation" "t-button__componentes--navigation t-image__triangle--right--navigation";
+  }
+}
+@media only screen and (max-width: 460px) {
+  .t-header--navigation {
+    grid-template-columns: auto;
+    grid-template-areas: "t-image--navigation" "t-button__estilos--navigation" "t-button__padroes--navigation" "t-button__componentes--navigation" "t-image__triangle--right--navigation";
+  }
+}
+
+.t-image--navigation {
+  grid-area: t-image--navigation;
+  text-align: end;
+}
+@media only screen and (max-width: 615px) {
+  .t-image--navigation {
+    text-align: left;
+  }
+}
+
+.t-button__estilos--navigation {
+  grid-area: t-button__estilos--navigation;
+  text-decoration: none !important;
+}
+
+.t-button__padroes--navigation {
+  grid-area: t-button__padroes--navigation;
+  text-decoration: none !important;
+}
+
+.t-button__componentes--navigation {
+  grid-area: t-button__componentes--navigation;
+}
+
+.t-image__triangle--right--navigation {
+  grid-area: t-image__triangle--right--navigation;
+  justify-self: end;
+}
+
+.t-page-start {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  grid-template-areas: "t-button__estilos t-button__padroes t-image" "t-button__componentes t-button__texto t-image";
+  grid-gap: 20px;
+  align-items: end;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 1023px) {
+  .t-page-start {
+    grid-template-columns: auto;
+    grid-template-areas: "t-button__estilos" "t-button__padroes" "t-button__componentes" "t-button__texto" "t-image";
+  }
+}
+
+.t-button__estilos {
+  grid-area: t-button__estilos;
+  text-decoration: none !important;
+}
+
+.t-button__padroes {
+  grid-area: t-button__padroes;
+  text-decoration: none !important;
+}
+
+.t-button__componentes {
+  grid-area: t-button__componentes;
+}
+
+.t-button__texto {
+  grid-area: t-button__texto;
+}
+
+.t-image {
+  grid-area: t-image;
+}
+
+.t-page-navigation {
+  margin: 0 30px;
+}
+
+.t-page-component {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  grid-template-areas: "t-button t-icon" "t-chip t-card";
+  grid-gap: 20px;
+  align-items: end;
+  justify-content: center;
+  align-content: center;
+}
+@media only screen and (max-width: 1023px) {
+  .t-page-component {
+    grid-template-columns: auto;
+    grid-template-areas: "t-button" "t-icon" "t-chip" "t-card";
+  }
+}
+
+.t-button {
+  grid-area: t-button;
+  text-decoration: none !important;
+}
+
+.t-icon {
+  grid-area: t-icon;
+  text-decoration: none !important;
+}
+
+.t-chip {
+  grid-area: t-chip;
+  text-decoration: none !important;
+}
+
+.t-card {
+  grid-area: t-card;
+  text-decoration: none !important;
+}
+
+.t-footer {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-areas: "t-image__triangle--left t-text";
+  justify-content: stretch;
+  align-items: end;
+  padding: 20px 20px 20px 10px;
+}
+
+.t-image__triangle--left {
+  grid-area: t-image__triangle--left;
+}
+
+.t-text {
+  grid-area: t-text;
+}
+
+/*# sourceMappingURL=style.css.map */

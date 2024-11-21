@@ -1,0 +1,24 @@
+.t-header--start {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: 
+        "t-title t-image__triangle--right"
+    ;
+    margin: 20px;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1023px) {
+        grid-template-columns: auto;
+        grid-template-areas: 
+            "t-title"
+        ;
+    }
+}
+
+.t-title {
+    grid-area: t-title;
+}
+
+.t-image__triangle--right {
+    grid-area: t-image__triangle--right;
+}
