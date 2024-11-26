@@ -1,0 +1,16 @@
+.m-menuItem {
+    font-family: 'Londrina Outline';
+    font-weight: bold;
+    color: #6E22B5;
+
+    &:hover {
+        color: black;
+        font-weight: 500;
+    }
+}
+
+.m-menuItem--green:hover {
+    img {
+        filter: brightness(1) invert(1);
+    }
+}

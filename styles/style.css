@@ -165,6 +165,20 @@ a:hover {
   filter: contrast(75%) brightness(75%);
 }
 
+.m-menuItem {
+  font-family: "Londrina Outline";
+  font-weight: bold;
+  color: #6E22B5;
+}
+.m-menuItem:hover {
+  color: black;
+  font-weight: 500;
+}
+
+.m-menuItem--green:hover img {
+  filter: brightness(1) invert(1);
+}
+
 /* Estruturas maiores do projeto, que podem modificar átomos e moléculas */
 .o-tabs {
   display: flex;
@@ -208,6 +222,84 @@ input[type=radio]:checked + label {
 .o-tabs:has(#tab1:checked) ~ .o-content .o-tab-content-1,
 .o-tabs:has(#tab2:checked) ~ .o-content .o-tab-content-2 {
   display: block;
+}
+
+.menu-dialog {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  color: black;
+  box-shadow: none;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.menu-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 560px) {
+  .menu-dialog {
+    display: none;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .menu-dialog ~ :is(a:has(div), div) {
+    display: none;
+  }
+}
+
+header:has(#menuToggle:checked) .menu-dialog {
+  transform: translateX(0);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+header:has(#menuToggle:checked) .menu-button {
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 1.2rem;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav li {
+  margin: 1rem 0;
+}
+
+.close-button, .menu-button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.menu-button {
+  margin-left: 30px;
+}
+@media only screen and (min-width: 560px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.close-button {
+  width: 20px;
 }
 
 /* Sistemas de grids e alinhamentos de organismos */
@@ -257,7 +349,7 @@ input[type=radio]:checked + label {
   display: grid;
   grid-template-columns: 1fr repeat(3, max-content) 2fr auto;
   grid-template-areas: "t-image--navigation t-button__estilos--navigation t-button__padroes--navigation t-button__componentes--navigation . t-image__triangle--right--navigation";
-  grid-gap: 20px;
+  gap: 20px;
   height: max-content;
   width: 100%;
   justify-content: center;
@@ -275,10 +367,10 @@ input[type=radio]:checked + label {
     grid-template-areas: "t-image--navigation ." "t-button__estilos--navigation t-button__padroes--navigation" "t-button__componentes--navigation t-image__triangle--right--navigation";
   }
 }
-@media only screen and (max-width: 460px) {
+@media only screen and (max-width: 560px) {
   .t-header--navigation {
-    grid-template-columns: auto;
-    grid-template-areas: "t-image--navigation" "t-button__estilos--navigation" "t-button__padroes--navigation" "t-button__componentes--navigation" "t-image__triangle--right--navigation";
+    grid-template-columns: 50px 61px 1fr;
+    grid-template-areas: "t-button__menu--navigation t-image--navigation t-image__triangle--right--navigation";
   }
 }
 
@@ -289,6 +381,11 @@ input[type=radio]:checked + label {
 @media only screen and (max-width: 615px) {
   .t-image--navigation {
     text-align: left;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .t-image--navigation {
+    justify-self: start;
   }
 }
 
@@ -309,6 +406,11 @@ input[type=radio]:checked + label {
 .t-image__triangle--right--navigation {
   grid-area: t-image__triangle--right--navigation;
   justify-self: end;
+}
+
+.t-button__menu--navigation {
+  grid-area: t-button__menu--navigation;
+  justify-self: start;
 }
 
 .t-page-start {

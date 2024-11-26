@@ -17,6 +17,41 @@
 
         <!-- Header -->
         <header class="t-header t-header--navigation">
+            <label for="menuToggle" class="t-button__menu--navigation menu-button" aria-label="Abrir menu">☰</label>
+            <input type="checkbox" id="menuToggle" hidden>
+            
+            <dialog class="menu-dialog">
+                <nav>
+                    <label for="menuToggle" class="close-button" aria-label="Fechar menu">✖</label>
+                    <ul>
+                        <li>
+                            <a href="../index.html">
+                                <img src="../images/MeuLogo_FundoClaro.png" alt="Meu logo, da inspiração da tulipa.">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="guia-estilos.html">
+                                <div class="m-menuItem">
+                                    Guia de estilos
+                                </div>
+                            </a>              
+                        </li>
+                        <li>
+                            <a href="padroes.html">
+                                <div class="m-menuItem">
+                                    Padrões
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <div>
+                                <img src="../images/Componentes.png" alt="Texto com fundo verde escrito Componentes." width="127" height="27">
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
             <a href="../index.html" class="t-image--navigation">
                 <img src="../images/MeuLogo_FundoClaro.png" alt="Meu logo, da inspiração da tulipa.">
             </a>
