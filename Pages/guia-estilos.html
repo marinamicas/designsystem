@@ -16,32 +16,66 @@
     <div class="t-main">
 
         <!-- Header -->
-        <header class="t-header t-header--navigation">
-            <a href="../index.html" class="t-image--navigation">
+        <header class="t-header t-header__navigation">
+            <label for="menuToggle" class="t-button__navigation--burgerMenu m-button__burgerMenu--open" aria-label="Abrir menu">☰</label>
+            <input type="checkbox" id="menuToggle" hidden>
+            
+            <dialog class="o-burgerMenu__dialog">
+                <nav>
+                    <label for="menuToggle" class="m-button__burgerMenu--close" aria-label="Fechar menu">✖</label>
+                    <ul>
+                        <li>
+                            <div class="m-button__burgerMenu--active">
+                                Guia de estilos
+                            </div>      
+                        </li>
+                        <li>
+                            <a href="padroes.html">
+                                <div class="m-button__burgerMenu">
+                                    Padrões
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="componentes.html">
+                                <div class="m-button__burgerMenu--green">
+                                    <img src="../images/Componentes.png" alt="Texto com fundo verde escrito Componentes." width="193" height="41">
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </dialog>
+
+            <a href="../index.html" class="t-image__navigation">
                 <img src="../images/MeuLogo_FundoClaro.png" alt="Meu logo, da inspiração da tulipa.">
             </a>
 
-            <div class="t-button__estilos--navigation m-button--active">
+            <div class="t-button__navigation--estilos m-button--active">
                 Guia de estilos
             </div>
 
-            <a href="padroes.html" class="t-button__padroes--navigation">
+            <a href="padroes.html" class="t-button__navigation--padroes">
                 <div class="m-button m-button--small">
                     Padrões
                 </div>
             </a>
 
-            <a href="componentes.html" class="t-button__componentes--navigation">
+            <a href="componentes.html" class="t-button__navigation--componentes">
                 <div class="m-button m-button--small u-border--green u-background--green">
                     <img src="../images/Componentes.png" alt="Texto com fundo verde escrito Componentes." width="127" height="27">
                 </div>
             </a>
             
-            <img src="../images/Triângulos_Header.png" class="t-image__triangle--right--navigation" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
+            <img src="../images/Triângulos_Header.png" class="t-image__navigation--triangleRight" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
         </header>
 
         <!-- Page -->
-        <page class="t-page t-page-navigation">
+        <page class="t-page t-page__navigation">
+            <h1>Guia de estilos</h1>
+
+            <p>Texto sobre guia de estilos.</p>
+
             <div class="o-tabs">
                 <input type="radio" id="tab1" name="o-tab" checked>
                 <label for="tab1" class="o-tab">Cores</label>
@@ -51,12 +85,12 @@
         
             <div class="o-content">
                 <div class="o-tab-content o-tab-content-1">
-                    <h3>Design</h3>
-                    <p>Conteúdo da aba de Design.</p>
+                    <h3>Cores</h3>
+                    <p>Conteúdo da aba de Cores.</p>
                 </div>
                 <div class="o-tab-content o-tab-content-2">
-                    <h3>Desenvolvimento</h3>
-                    <p>Conteúdo da aba de Desenvolvimento.</p>
+                    <h3>Tipografia</h3>
+                    <p>Conteúdo da aba de Tipografia.</p>
                 </div>
             </div>
         </page>

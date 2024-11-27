@@ -75,3 +75,56 @@
         filter: contrast(75%) brightness(75%);
     }
 }
+
+%m-button__burgerMenu--style {
+    background: none;
+    border: none;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.m-button__burgerMenu--open {
+    @extend %m-button__burgerMenu--style;
+
+    @media only screen and (min-width: 560px) {
+        display: none;
+    }
+}
+
+.m-button__burgerMenu--close {
+    @extend %m-button__burgerMenu--style;
+    width: 20px;
+}
+
+.m-button__burgerMenu {
+    font-family: 'Londrina Outline';
+    font-weight: 600;
+    font-size: 36px;
+    color: #6E22B5;
+
+    &:hover {
+        color: #37115A;
+        font-weight: bolder;
+    }
+}
+
+.m-button__burgerMenu--green {
+    filter: contrast(75%) brightness(75%);
+
+    &:hover {
+        filter: contrast(55%) brightness(55%);
+        cursor: pointer;
+    }
+}
+
+.m-button__burgerMenu--active {
+    font-family: 'Londrina Outline';
+    font-weight: bolder;
+    font-size: 36px;
+    color: #37115A;
+}
+
+.m-button__burgerMenu--active--green {
+    filter: contrast(55%) brightness(55%);
+}

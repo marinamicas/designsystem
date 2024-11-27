@@ -1,8 +1,8 @@
-.t-header--navigation {
+.t-header__navigation {
     display: grid;
     grid-template-columns: 1fr repeat(3, max-content) 2fr auto;
     grid-template-areas: 
-        "t-image--navigation t-button__estilos--navigation t-button__padroes--navigation t-button__componentes--navigation . t-image__triangle--right--navigation"
+        "t-image__navigation t-button__navigation--estilos t-button__navigation--padroes t-button__navigation--componentes . t-image__navigation--triangleRight"
     ;
     grid-gap: 20px;
     height: max-content;
@@ -13,56 +13,61 @@
     @media only screen and (max-width: 800px) {
         grid-template-columns: repeat(3, max-content);
         grid-template-areas: 
-            "t-image--navigation t-button__estilos--navigation ." 
-            "t-button__padroes--navigation t-button__componentes--navigation t-image__triangle--right--navigation"
+            "t-image__navigation t-button__navigation--estilos ." 
+            "t-button__navigation--padroes t-button__navigation--componentes t-image__navigation--triangleRight"
         ;
     }
 
     @media only screen and (max-width: 615px) {
         grid-template-columns: repeat(2, max-content);
         grid-template-areas: 
-            "t-image--navigation ." 
-            "t-button__estilos--navigation t-button__padroes--navigation" 
-            "t-button__componentes--navigation t-image__triangle--right--navigation"
+            "t-image__navigation ." 
+            "t-button__navigation--estilos t-button__navigation--padroes" 
+            "t-button__navigation--componentes t-image__navigation--triangleRight"
         ;
     }
 
-    @media only screen and (max-width: 460px) {
-        grid-template-columns: auto;
+    @media only screen and (max-width: 560px) {
+        grid-template-columns: 50px 61px 1fr;
         grid-template-areas: 
-            "t-image--navigation" 
-            "t-button__estilos--navigation"
-            "t-button__padroes--navigation"
-            "t-button__componentes--navigation"
-            "t-image__triangle--right--navigation"
+            "t-button__navigation--burgerMenu t-image__navigation t-image__navigation--triangleRight"
         ;
     }
 }
 
-.t-image--navigation {
-    grid-area: t-image--navigation;
+.t-image__navigation {
+    grid-area: t-image__navigation;
     text-align: end;
 
     @media only screen and (max-width: 615px) {
         text-align: left;
     }
+
+    @media only screen and (max-width: 560px) {
+        justify-self: start;
+    }
 }
 
-.t-button__estilos--navigation {
-    grid-area: t-button__estilos--navigation;
+.t-button__navigation--estilos {
+    grid-area: t-button__navigation--estilos;
     text-decoration: none !important;
 }
 
-.t-button__padroes--navigation {
-    grid-area: t-button__padroes--navigation;
+.t-button__navigation--padroes {
+    grid-area: t-button__navigation--padroes;
     text-decoration: none !important;
 }
 
-.t-button__componentes--navigation {
-    grid-area: t-button__componentes--navigation;
+.t-button__navigation--componentes {
+    grid-area: t-button__navigation--componentes;
 }
 
-.t-image__triangle--right--navigation {
-    grid-area: t-image__triangle--right--navigation;
+.t-image__navigation--triangleRight {
+    grid-area: t-image__navigation--triangleRight;
     justify-self: end;
+}
+
+.t-button__navigation--burgerMenu {
+    grid-area: t-button__navigation--burgerMenu;
+    justify-self: center;
 }

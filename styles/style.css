@@ -40,6 +40,7 @@
 .u-link--right {
   display: flex;
   justify-content: end;
+  margin-top: -10px;
 }
 
 @font-face {
@@ -165,6 +166,54 @@ a:hover {
   filter: contrast(75%) brightness(75%);
 }
 
+.m-button__burgerMenu--close, .m-button__burgerMenu--open {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 560px) {
+  .m-button__burgerMenu--open {
+    display: none;
+  }
+}
+
+.m-button__burgerMenu--close {
+  width: 20px;
+}
+
+.m-button__burgerMenu {
+  font-family: "Londrina Outline";
+  font-weight: 600;
+  font-size: 36px;
+  color: #6E22B5;
+}
+.m-button__burgerMenu:hover {
+  color: #37115A;
+  font-weight: bolder;
+}
+
+.m-button__burgerMenu--green {
+  filter: contrast(75%) brightness(75%);
+}
+.m-button__burgerMenu--green:hover {
+  filter: contrast(55%) brightness(55%);
+  cursor: pointer;
+}
+
+.m-button__burgerMenu--active {
+  font-family: "Londrina Outline";
+  font-weight: bolder;
+  font-size: 36px;
+  color: #37115A;
+}
+
+.m-button__burgerMenu--active--green {
+  filter: contrast(55%) brightness(55%);
+}
+
 /* Estruturas maiores do projeto, que podem modificar átomos e moléculas */
 .o-tabs {
   display: flex;
@@ -210,6 +259,64 @@ input[type=radio]:checked + label {
   display: block;
 }
 
+.o-burgerMenu__dialog {
+  display: block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: white;
+  color: black;
+  box-shadow: none;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.o-burgerMenu__dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 560px) {
+  .o-burgerMenu__dialog {
+    display: none;
+  }
+}
+@media only screen and (max-width: 560px) {
+  .o-burgerMenu__dialog ~ :is(a:has(div), div) {
+    display: none;
+  }
+}
+
+header:has(#menuToggle:checked) .o-burgerMenu__dialog {
+  transform: translateX(0);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+header:has(#menuToggle:checked) .m-button__burgerMenu--open {
+  pointer-events: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1rem;
+}
+nav a {
+  color: white;
+  text-decoration: none !important;
+  font-size: 1.2rem;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  justify-items: center;
+}
+nav li {
+  margin: 2rem 0;
+}
+
 /* Sistemas de grids e alinhamentos de organismos */
 .t-main {
   display: grid;
@@ -231,32 +338,45 @@ input[type=radio]:checked + label {
   grid-area: t-footer;
 }
 
-.t-header--start {
+.t-header__start {
   display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-template-areas: "t-title t-image__triangle--right";
+  grid-template-columns: repeat(3, auto);
+  grid-template-areas: "t-image__start t-title__start t-image__start--triangleRight";
   margin: 20px;
   justify-content: space-between;
+  align-items: center;
 }
 @media only screen and (max-width: 1023px) {
-  .t-header--start {
-    grid-template-columns: auto;
-    grid-template-areas: "t-title";
+  .t-header__start {
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas: "t-image__start t-title__start" ". t-image__start--triangleRight";
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
   }
 }
 
-.t-title {
-  grid-area: t-title;
+.t-image__start {
+  grid-area: t-image__start;
 }
 
-.t-image__triangle--right {
-  grid-area: t-image__triangle--right;
+.t-title__start {
+  grid-area: t-title__start;
 }
 
-.t-header--navigation {
+.t-image__start--triangleRight {
+  grid-area: t-image__start--triangleRight;
+}
+@media only screen and (max-width: 1023px) {
+  .t-image__start--triangleRight {
+    justify-self: end;
+  }
+}
+
+.t-header__navigation {
   display: grid;
   grid-template-columns: 1fr repeat(3, max-content) 2fr auto;
-  grid-template-areas: "t-image--navigation t-button__estilos--navigation t-button__padroes--navigation t-button__componentes--navigation . t-image__triangle--right--navigation";
+  grid-template-areas: "t-image__navigation t-button__navigation--estilos t-button__navigation--padroes t-button__navigation--componentes . t-image__navigation--triangleRight";
   grid-gap: 20px;
   height: max-content;
   width: 100%;
@@ -264,128 +384,149 @@ input[type=radio]:checked + label {
   align-items: center;
 }
 @media only screen and (max-width: 800px) {
-  .t-header--navigation {
+  .t-header__navigation {
     grid-template-columns: repeat(3, max-content);
-    grid-template-areas: "t-image--navigation t-button__estilos--navigation ." "t-button__padroes--navigation t-button__componentes--navigation t-image__triangle--right--navigation";
+    grid-template-areas: "t-image__navigation t-button__navigation--estilos ." "t-button__navigation--padroes t-button__navigation--componentes t-image__navigation--triangleRight";
   }
 }
 @media only screen and (max-width: 615px) {
-  .t-header--navigation {
+  .t-header__navigation {
     grid-template-columns: repeat(2, max-content);
-    grid-template-areas: "t-image--navigation ." "t-button__estilos--navigation t-button__padroes--navigation" "t-button__componentes--navigation t-image__triangle--right--navigation";
+    grid-template-areas: "t-image__navigation ." "t-button__navigation--estilos t-button__navigation--padroes" "t-button__navigation--componentes t-image__navigation--triangleRight";
   }
 }
-@media only screen and (max-width: 460px) {
-  .t-header--navigation {
-    grid-template-columns: auto;
-    grid-template-areas: "t-image--navigation" "t-button__estilos--navigation" "t-button__padroes--navigation" "t-button__componentes--navigation" "t-image__triangle--right--navigation";
+@media only screen and (max-width: 560px) {
+  .t-header__navigation {
+    grid-template-columns: 50px 61px 1fr;
+    grid-template-areas: "t-button__navigation--burgerMenu t-image__navigation t-image__navigation--triangleRight";
   }
 }
 
-.t-image--navigation {
-  grid-area: t-image--navigation;
+.t-image__navigation {
+  grid-area: t-image__navigation;
   text-align: end;
 }
 @media only screen and (max-width: 615px) {
-  .t-image--navigation {
+  .t-image__navigation {
     text-align: left;
   }
 }
+@media only screen and (max-width: 560px) {
+  .t-image__navigation {
+    justify-self: start;
+  }
+}
 
-.t-button__estilos--navigation {
-  grid-area: t-button__estilos--navigation;
+.t-button__navigation--estilos {
+  grid-area: t-button__navigation--estilos;
   text-decoration: none !important;
 }
 
-.t-button__padroes--navigation {
-  grid-area: t-button__padroes--navigation;
+.t-button__navigation--padroes {
+  grid-area: t-button__navigation--padroes;
   text-decoration: none !important;
 }
 
-.t-button__componentes--navigation {
-  grid-area: t-button__componentes--navigation;
+.t-button__navigation--componentes {
+  grid-area: t-button__navigation--componentes;
 }
 
-.t-image__triangle--right--navigation {
-  grid-area: t-image__triangle--right--navigation;
+.t-image__navigation--triangleRight {
+  grid-area: t-image__navigation--triangleRight;
   justify-self: end;
 }
 
-.t-page-start {
+.t-button__navigation--burgerMenu {
+  grid-area: t-button__navigation--burgerMenu;
+  justify-self: center;
+}
+
+.t-page__start {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  grid-template-areas: "t-button__estilos t-button__padroes t-image" "t-button__componentes t-button__texto t-image";
+  grid-template-areas: "t-button__start--estilos t-button__start--padroes t-image__start" "t-button__start--componentes t-button__start--texto t-image__start";
   grid-gap: 20px;
   align-items: end;
   justify-content: center;
   align-content: center;
 }
 @media only screen and (max-width: 1023px) {
-  .t-page-start {
+  .t-page__start {
     grid-template-columns: auto;
-    grid-template-areas: "t-button__estilos" "t-button__padroes" "t-button__componentes" "t-button__texto" "t-image";
+    grid-template-areas: "t-button__start--estilos" "t-button__start--padroes" "t-button__start--componentes" "t-button__start--texto" "t-image__start";
   }
 }
 
-.t-button__estilos {
-  grid-area: t-button__estilos;
+.t-button__start--estilos {
+  grid-area: t-button__start--estilos;
   text-decoration: none !important;
 }
 
-.t-button__padroes {
-  grid-area: t-button__padroes;
+.t-button__start--padroes {
+  grid-area: t-button__start--padroes;
   text-decoration: none !important;
 }
 
-.t-button__componentes {
-  grid-area: t-button__componentes;
+.t-button__start--componentes {
+  grid-area: t-button__start--componentes;
 }
 
-.t-button__texto {
-  grid-area: t-button__texto;
+.t-button__start--texto {
+  grid-area: t-button__start--texto;
 }
 
-.t-image {
-  grid-area: t-image;
+.t-image__start {
+  grid-area: t-image__start;
 }
 
-.t-page-navigation {
+.t-page__navigation {
   margin: 0 30px;
 }
 
-.t-page-component {
+.t-page__component {
   display: grid;
   grid-template-columns: repeat(2, max-content);
-  grid-template-areas: "t-button t-icon" "t-chip t-card";
+  grid-template-areas: "t-title__component t-title__component" "t-text__component t-text__component" "t-button__component t-icon__component" "t-chip__component t-card__component";
   grid-gap: 20px;
   align-items: end;
   justify-content: center;
   align-content: center;
 }
 @media only screen and (max-width: 1023px) {
-  .t-page-component {
+  .t-page__component {
     grid-template-columns: auto;
-    grid-template-areas: "t-button" "t-icon" "t-chip" "t-card";
+    grid-template-areas: "t-title__component" "t-text__component" "t-button__component" "t-icon__component" "t-chip__component" "t-card__component";
   }
 }
 
-.t-button {
-  grid-area: t-button;
+.t-title__component {
+  grid-area: t-title__component;
   text-decoration: none !important;
 }
 
-.t-icon {
-  grid-area: t-icon;
+.t-text__component {
+  grid-area: t-text__component;
+  text-decoration: none !important;
+  margin-top: -15px;
+}
+
+.t-button__component {
+  grid-area: t-button__component;
   text-decoration: none !important;
 }
 
-.t-chip {
-  grid-area: t-chip;
+.t-icon__component {
+  grid-area: t-icon__component;
   text-decoration: none !important;
 }
 
-.t-card {
-  grid-area: t-card;
+.t-chip__component {
+  grid-area: t-chip__component;
+  text-decoration: none !important;
+}
+
+.t-card__component {
+  grid-area: t-card__component;
   text-decoration: none !important;
 }
 

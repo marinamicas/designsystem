@@ -1,0 +1,64 @@
+.o-burgerMenu__dialog {
+    display: block;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: white;
+    color: black;
+    box-shadow: none;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &::backdrop {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    @media only screen and (min-width: 560px) {
+        display: none;
+    }
+
+    & ~ :is(a:has(div), div) {
+        @media only screen and (max-width: 560px) {
+            display: none;
+        }
+    }
+}
+
+header:has(#menuToggle:checked) {
+    .o-burgerMenu__dialog {
+        transform: translateX(0);
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .m-button__burgerMenu--open {
+        pointer-events: none;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+
+    a {
+        color: white;
+        text-decoration: none !important;
+        font-size: 1.2rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        justify-items: center;
+    }
+
+    li {
+        margin: 2rem 0;
+    }
+}

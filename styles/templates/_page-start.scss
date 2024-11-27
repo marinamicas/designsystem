@@ -1,9 +1,9 @@
-.t-page-start {
+.t-page__start {
     display: grid;
     grid-template-columns: repeat(3, max-content);
     grid-template-areas: 
-        "t-button__estilos t-button__padroes t-image"
-        "t-button__componentes t-button__texto t-image"
+        "t-button__start--estilos t-button__start--padroes t-image__start"
+        "t-button__start--componentes t-button__start--texto t-image__start"
     ;
     grid-gap: 20px;
     align-items: end;
@@ -13,33 +13,33 @@
     @media only screen and (max-width: 1023px) {
         grid-template-columns: auto;
         grid-template-areas: 
-            "t-button__estilos"
-            "t-button__padroes"
-            "t-button__componentes"
-            "t-button__texto"
-            "t-image"
+            "t-button__start--estilos"
+            "t-button__start--padroes"
+            "t-button__start--componentes"
+            "t-button__start--texto"
+            "t-image__start"
         ;
     }
 }
 
-.t-button__estilos {
-    grid-area: t-button__estilos;
+.t-button__start--estilos {
+    grid-area: t-button__start--estilos;
     text-decoration: none !important;
 }
 
-.t-button__padroes {
-    grid-area: t-button__padroes;
+.t-button__start--padroes {
+    grid-area: t-button__start--padroes;
     text-decoration: none !important;
 }
 
-.t-button__componentes {
-    grid-area: t-button__componentes;
+.t-button__start--componentes {
+    grid-area: t-button__start--componentes;
 }
 
-.t-button__texto {
-    grid-area: t-button__texto;
+.t-button__start--texto {
+    grid-area: t-button__start--texto;
 }
 
-.t-image {
-    grid-area: t-image;
+.t-image__start {
+    grid-area: t-image__start;
 }
