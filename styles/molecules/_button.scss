@@ -1,15 +1,25 @@
-.m-button {
-    border: 6px solid #F3EAFC;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 9px;
-    background-color: #ffffff;
-    font-family: 'Londrina Outline';
-    font-weight: bold;
-    color: #6E22B5;
+@use "../core/variables" as *;
+
+%m-button__main {
+    border: 6px solid $light-main-color;
+    color: $main-color;
+    @extend %m-button__general;
+}
+
+%m-button__general {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 9px;
+    font-family: $font-highlighted-text;
+    font-weight: bold;
+}
+
+.m-button {
+    @extend %m-button__main;
+    background-color: $light-color;
 
     &--big {
         width: 386px;
@@ -29,63 +39,46 @@
     }
 
     &:hover {
-        background-color: #6E22B5;
-        border: 6px solid #6E22B5;
-        color: #ffffff;
+        background-color: $main-color;
+        border: 6px solid $main-color;
+        color: $light-color;
         font-weight: 500;
 
         a {
-            color: #ffffff;
+            color: $light-color;
         }
     }
 }
 
-.m-button--active {
-    border: 6px solid #F3EAFC;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 9px;
-    background-color: #F3EAFC;
-    font-family: 'Londrina Outline';
-    font-weight: bold;
-    color: #6E22B5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.m-button__active {
+    @extend %m-button__main;
+    background-color: $light-main-color;
     width: 185px;
     height: 58px;
     font-size: 24px;
 }
 
-.m-button--active--green {
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 9px;
-    background-color: rgba(110, 164, 79, 0.3);
-    font-family: 'Londrina Outline';
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.m-button__active--highlight {
+    @extend %m-button__general;
+    background-color: $dark-highlight-color;
     width: 185px;
     height: 58px;
-    font-size: 24px;
 
     img {
         filter: contrast(75%) brightness(75%);
     }
 }
 
-%m-button__burgerMenu--style {
+%m-button__burgerMenu {
     background: none;
     border: none;
-    color: black;
+    color: $secondary-color;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 .m-button__burgerMenu--open {
-    @extend %m-button__burgerMenu--style;
+    @extend %m-button__burgerMenu;
 
     @media only screen and (min-width: 560px) {
         display: none;
@@ -93,38 +86,6 @@
 }
 
 .m-button__burgerMenu--close {
-    @extend %m-button__burgerMenu--style;
+    @extend %m-button__burgerMenu;
     width: 20px;
-}
-
-.m-button__burgerMenu {
-    font-family: 'Londrina Outline';
-    font-weight: 600;
-    font-size: 36px;
-    color: #6E22B5;
-
-    &:hover {
-        color: #37115A;
-        font-weight: bolder;
-    }
-}
-
-.m-button__burgerMenu--green {
-    filter: contrast(75%) brightness(75%);
-
-    &:hover {
-        filter: contrast(55%) brightness(55%);
-        cursor: pointer;
-    }
-}
-
-.m-button__burgerMenu--active {
-    font-family: 'Londrina Outline';
-    font-weight: bolder;
-    font-size: 36px;
-    color: #37115A;
-}
-
-.m-button__burgerMenu--active--green {
-    filter: contrast(55%) brightness(55%);
 }

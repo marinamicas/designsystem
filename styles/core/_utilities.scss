@@ -1,38 +1,42 @@
-.u-border--green {
-    border-color: rgba(110, 164, 79, 0.3) !important;
+@use "variables" as *;
+
+.u-border--transparentHighlightColor {
+    border-color: $transparent-highlight-color !important;
 }
 
 .u-border--dashed {
     border-style: dashed !important;
 }
 
-.u-text--20 {
-    font-size: 20px;
-    line-height: 28.5px;
-    letter-spacing: 2.28%;
+.u-background--lightHighlightColor:hover {
+    background-color: $light-highlight-color !important;
+
+    img {
+        filter: brightness(0) invert(1);
+    }
 }
 
-.u-text--14 {
-    font-size: 14px;
+.u-image__start--dimensionComponent {
+    width: 254px;
+    height: 55px;
+
+    @media only screen and (max-width: 415px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.u-image__navigation--dimensionComponent {
+    width: 127px;
+    height: 27px;
 }
 
 .u-text--bold {
     font-weight: bold;
 }
 
-.u-text--medium {
-    font-weight: 500;
-}
-
-.u-text--purple {
-    color: #6E22B5;
-}
-
-.u-background--green:hover {
-    background-color: #6EA44F !important;
-    img {
-        filter: brightness(0) invert(1);
-    }
+.u-text--mainColor {
+    color: $main-color;
 }
 
 .u-link--right {

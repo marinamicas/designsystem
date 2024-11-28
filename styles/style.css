@@ -1,6 +1,9 @@
 @charset "UTF-8";
 /* Configurações básicas */
-.u-border--green {
+/* Color */
+/* Size, weight, line-height e letter-spacing */
+/* Font */
+.u-border--transparentHighlightColor {
   border-color: rgba(110, 164, 79, 0.3) !important;
 }
 
@@ -8,33 +11,35 @@
   border-style: dashed !important;
 }
 
-.u-text--20 {
-  font-size: 20px;
-  line-height: 28.5px;
-  letter-spacing: 2.28%;
+.u-background--lightHighlightColor:hover {
+  background-color: #6EA44F !important;
+}
+.u-background--lightHighlightColor:hover img {
+  filter: brightness(0) invert(1);
 }
 
-.u-text--14 {
-  font-size: 14px;
+.u-image__start--dimensionComponent {
+  width: 254px;
+  height: 55px;
+}
+@media only screen and (max-width: 415px) {
+  .u-image__start--dimensionComponent {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.u-image__navigation--dimensionComponent {
+  width: 127px;
+  height: 27px;
 }
 
 .u-text--bold {
   font-weight: bold;
 }
 
-.u-text--medium {
-  font-weight: 500;
-}
-
-.u-text--purple {
+.u-text--mainColor {
   color: #6E22B5;
-}
-
-.u-background--green:hover {
-  background-color: #6EA44F !important;
-}
-.u-background--green:hover img {
-  filter: brightness(0) invert(1);
 }
 
 .u-link--right {
@@ -62,48 +67,63 @@
   font-weight: 100 900; /* Faixa de pesos variáveis */
 }
 /* Classes individuais e elementos pequenos e reutilizáveis */
+body {
+  color: #1B1B1B;
+  background-color: #FCFCFC;
+}
+
 body, p {
   font-family: "Raleway";
 }
 
-.a-title {
+.a-title__main {
   font-size: 36px;
   font-weight: 300;
-  color: #6E22B5;
   line-height: 43.5px;
+  letter-spacing: 2.28%;
+  color: #6E22B5;
+}
+
+.a-text__highlight {
+  font-size: 20px;
+  line-height: 28.5px;
   letter-spacing: 2.28%;
 }
 
-a {
+.a-text__footer {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+a:active, a:visited, a {
   color: #6E22B5;
   text-decoration: underline;
 }
-a:visited {
-  color: #6E22B5;
-  text-decoration: underline;
-}
-a:active {
-  color: #6E22B5;
-  text-decoration: underline;
-}
+
 a:hover {
   color: #3C1363;
   text-decoration: underline;
 }
 
 /* Cria um elemento 'pai' para modificar os átomos */
-.m-button {
+.m-button__active, .m-button {
   border: 6px solid #F3EAFC;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 9px;
-  background-color: #ffffff;
-  font-family: "Londrina Outline";
-  font-weight: bold;
   color: #6E22B5;
+}
+
+.m-button__active--highlight, .m-button__active, .m-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 9px;
+  font-family: "Londrina Outline";
+  font-weight: bold;
+}
+
+.m-button {
+  background-color: #ffffff;
 }
 .m-button--big {
   width: 386px;
@@ -131,45 +151,26 @@ a:hover {
   color: #ffffff;
 }
 
-.m-button--active {
-  border: 6px solid #F3EAFC;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 9px;
+.m-button__active {
   background-color: #F3EAFC;
-  font-family: "Londrina Outline";
-  font-weight: bold;
-  color: #6E22B5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 185px;
   height: 58px;
   font-size: 24px;
 }
 
-.m-button--active--green {
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 9px;
+.m-button__active--highlight {
   background-color: rgba(110, 164, 79, 0.3);
-  font-family: "Londrina Outline";
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 185px;
   height: 58px;
-  font-size: 24px;
 }
-.m-button--active--green img {
+.m-button__active--highlight img {
   filter: contrast(75%) brightness(75%);
 }
 
 .m-button__burgerMenu--close, .m-button__burgerMenu--open {
   background: none;
   border: none;
-  color: black;
+  color: #3C1363;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -182,36 +183,6 @@ a:hover {
 
 .m-button__burgerMenu--close {
   width: 20px;
-}
-
-.m-button__burgerMenu {
-  font-family: "Londrina Outline";
-  font-weight: 600;
-  font-size: 36px;
-  color: #6E22B5;
-}
-.m-button__burgerMenu:hover {
-  color: #37115A;
-  font-weight: bolder;
-}
-
-.m-button__burgerMenu--green {
-  filter: contrast(75%) brightness(75%);
-}
-.m-button__burgerMenu--green:hover {
-  filter: contrast(55%) brightness(55%);
-  cursor: pointer;
-}
-
-.m-button__burgerMenu--active {
-  font-family: "Londrina Outline";
-  font-weight: bolder;
-  font-size: 36px;
-  color: #37115A;
-}
-
-.m-button__burgerMenu--active--green {
-  filter: contrast(55%) brightness(55%);
 }
 
 /* Estruturas maiores do projeto, que podem modificar átomos e moléculas */
@@ -230,7 +201,7 @@ a:hover {
 input[type=radio]:not(:checked) + .o-tab:hover {
   background-color: #6E22B5;
   border-radius: 9px 9px 0 0;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
 }
 
@@ -269,8 +240,8 @@ input[type=radio]:checked + label {
   position: fixed;
   left: 0;
   top: 0;
-  background: white;
-  color: black;
+  background: #ffffff;
+  color: #000000;
   box-shadow: none;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -304,7 +275,7 @@ nav {
   padding: 1rem;
 }
 nav a {
-  color: white;
+  color: #ffffff;
   text-decoration: none !important;
   font-size: 1.2rem;
 }

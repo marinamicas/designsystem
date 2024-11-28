@@ -1,13 +1,30 @@
+@use "../core/variables" as *;
 @use "../core/font" as *;
 
-body, p {
-    font-family: 'Raleway';
+body {
+    color: $normal-text-color;
+    background-color: $background-color;
 }
 
-.a-title {
-    font-size: 36px;
-    font-weight: 300;
-    color: #6E22B5;
-    line-height: 43.5px;
-    letter-spacing: 2.28%;
+body, p {
+    font-family: $font-main-text;
+}
+
+.a-title__main {
+    font-size: $main-title-size;
+    font-weight: $main-title-weight;
+    line-height: $main-title-lineHeight;
+    letter-spacing: $main-title-letterSpacing;
+    color: $main-color;
+}
+
+.a-text__highlight {
+    font-size: $highlight-text-size;
+    line-height: $highlight-text-lineHeight;
+    letter-spacing: $highlight-text-letterSpacing;
+}
+
+.a-text__footer {
+    font-size: $footer-text-size;
+    font-weight: $footer-text-weight;
 }

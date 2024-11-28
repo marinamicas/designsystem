@@ -1,19 +1,23 @@
-a {
-    color: #6E22B5;
+@use "../core/variables" as *;
+
+%a-text__link--main {
+    color: $main-color;
     text-decoration: underline;
+}
+
+a {
+    @extend %a-text__link--main;
 
     &:visited {
-        color: #6E22B5;
-        text-decoration: underline;
+        @extend %a-text__link--main;
     }
 
     &:active {
-        color: #6E22B5;
-        text-decoration: underline;
+        @extend %a-text__link--main;
     }
 
     &:hover {
-        color: #3C1363;
+        color: $secondary-color;
         text-decoration: underline;
     }
 }
