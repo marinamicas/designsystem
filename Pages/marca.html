@@ -9,7 +9,32 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="../styles/style.css" media="screen" />
     
-    <title>Design system :: Marina Micas</title>   
+    <title>Design system :: Marina Micas</title>  
+    
+    <style>
+        body {
+            /* inserindo imagem de fundo como marca d'água */
+            position: relative; /* Necessário para usar o ::before corretamente */
+            margin: 0;
+            padding: 0;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('../images/tulipa.png'); /* Substitua pelo caminho da sua imagem */
+            background-repeat: no-repeat; /* Impede que a imagem se repita */
+            background-position: center; /* Centraliza a imagem */
+            background-size: contain; /* Ajusta o tamanho da imagem para caber no fundo */
+            opacity: 0.2; /* Define a transparência da imagem */
+            z-index: -1; /* Coloca a imagem atrás do conteúdo */
+            pointer-events: none; /* Garante que a imagem não interfira com interações */
+        }
+    </style>
 </head>
 
 <body class="u-image__tulipa--transparent">
