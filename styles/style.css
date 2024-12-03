@@ -247,9 +247,6 @@ input[type=radio]:checked + label {
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
-.o-burgerMenu__dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-}
 @media only screen and (min-width: 560px) {
   .o-burgerMenu__dialog {
     display: none;
@@ -263,7 +260,6 @@ input[type=radio]:checked + label {
 
 header:has(#menuToggle:checked) .o-burgerMenu__dialog {
   transform: translateX(0);
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
 }
 header:has(#menuToggle:checked) .m-button__burgerMenu--open {
   pointer-events: none;

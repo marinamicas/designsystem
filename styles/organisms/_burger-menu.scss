@@ -16,10 +16,6 @@
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
-    &::backdrop {
-        background: $transparent-dark-color;
-    }
-
     @media only screen and (min-width: 560px) {
         display: none;
     }
@@ -34,7 +30,6 @@
 header:has(#menuToggle:checked) {
     .o-burgerMenu__dialog {
         transform: translateX(0);
-        box-shadow: 2px 0 5px $transparent-dark-color;
     }
 
     .m-button__burgerMenu--open {

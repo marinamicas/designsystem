@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .u-border--transparentHighlightColor {
-    border-color: $transparent-highlight-color !important;
+    border-color: $highlight-color-transparent !important;
 }
 
 .u-border--dashed {
@@ -9,7 +9,7 @@
 }
 
 .u-background--lightHighlightColor:hover {
-    background-color: $light-highlight-color !important;
+    background-color: $highlight-color-light !important;
 
     img {
         filter: brightness(0) invert(1);

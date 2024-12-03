@@ -60,7 +60,7 @@
 
 .m-button__active--highlight {
     @extend %m-button__general;
-    background-color: $dark-highlight-color;
+    background-color: $highlight-color-transparent;
     width: 185px;
     height: 58px;
 
