@@ -102,13 +102,13 @@ a:active, a:visited, a {
 }
 
 a:hover {
-  color: #3C1363;
+  color: #2C0E48;
   text-decoration: underline;
 }
 
 /* Cria um elemento 'pai' para modificar os átomos */
 .m-button__active, .m-button {
-  border: 6px solid #F3EAFC;
+  border: 6px solid #F0E8F7;
   color: #6E22B5;
 }
 
@@ -153,7 +153,7 @@ a:hover {
 }
 
 .m-button__active {
-  background-color: #F3EAFC;
+  background-color: #F0E8F7;
   width: 185px;
   height: 58px;
   font-size: 24px;
@@ -171,7 +171,7 @@ a:hover {
 .m-button__burgerMenu--close, .m-button__burgerMenu--open {
   background: none;
   border: none;
-  color: #3C1363;
+  color: #2C0E48;
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -211,7 +211,7 @@ input[type=radio] {
 }
 
 input[type=radio]:checked + label {
-  background-color: #F3EAFC;
+  background-color: #F0E8F7;
   border: none;
   border-radius: 9px 9px 0 0;
   font-weight: 600;
