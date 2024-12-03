@@ -124,7 +124,7 @@ a:hover {
 }
 
 .m-button {
-  background-color: #ffffff;
+  background-color: #FCFCFC;
 }
 .m-button--big {
   width: 386px;
@@ -145,11 +145,11 @@ a:hover {
 .m-button:hover {
   background-color: #6E22B5;
   border: 6px solid #6E22B5;
-  color: #ffffff;
+  color: #FCFCFC;
   font-weight: 500;
 }
 .m-button:hover a {
-  color: #ffffff;
+  color: #FCFCFC;
 }
 
 .m-button__active {
@@ -202,7 +202,7 @@ a:hover {
 input[type=radio]:not(:checked) + .o-tab:hover {
   background-color: #6E22B5;
   border-radius: 9px 9px 0 0;
-  color: #ffffff;
+  color: #FCFCFC;
   cursor: pointer;
 }
 
@@ -241,8 +241,8 @@ input[type=radio]:checked + label {
   position: fixed;
   left: 0;
   top: 0;
-  background: #ffffff;
-  color: #000000;
+  background: #FCFCFC;
+  color: #1B1B1B;
   box-shadow: none;
   transform: translateX(-100%);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -276,7 +276,7 @@ nav {
   padding: 1rem;
 }
 nav a {
-  color: #ffffff;
+  color: #FCFCFC;
   text-decoration: none !important;
   font-size: 1.2rem;
 }

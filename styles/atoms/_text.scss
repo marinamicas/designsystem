@@ -2,8 +2,8 @@
 @use "../core/font" as *;
 
 body {
-    color: $normal-text-color;
-    background-color: $background-color;
+    color: $dark-color;
+    background-color: $light-color;
 }
 
 body, p {
