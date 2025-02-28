@@ -3,7 +3,7 @@
     grid-template-columns: repeat(2, max-content);
     grid-template-areas: 
         "t-pageComponents__title t-pageComponents__title"
-        "t-pageComponents__text--footer t-pageComponents__text--footer"
+        "t-pageComponents__text t-pageComponents__text"
         "t-pageComponents__component--button t-pageComponents__component--iconButton"
         "t-pageComponents__component--chip t-pageComponents__component--card"
     ;
@@ -16,7 +16,7 @@
         grid-template-columns: auto;
         grid-template-areas: 
             "t-pageComponents__title"
-            "t-pageComponents__text--footer"
+            "t-pageComponents__text"
             "t-pageComponents__component--button"
             "t-pageComponents__component--iconButton"
             "t-pageComponents__component--chip"
@@ -30,8 +30,8 @@
     text-decoration: none !important;
 }
 
-.t-pageComponents__text--footer {
-    grid-area: t-pageComponents__text--footer;
+.t-pageComponents__text {
+    grid-area: t-pageComponents__text;
     text-decoration: none !important;
     margin-top: -15px;
 }
