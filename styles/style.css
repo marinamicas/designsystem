@@ -417,7 +417,7 @@ nav li {
 .t-pageStart {
   display: grid;
   grid-template-columns: repeat(3, max-content);
-  grid-template-areas: "t-pageStart__button--style t-pageStart__button--standards t-headerStart__image--logoWhite" "t-pageStart__button--components t-pageStart__button--texts t-headerStart__image--logoWhite";
+  grid-template-areas: "t-pageStart__button--styleGuide t-pageStart__button--standards t-headerStart__image--logoWhite" "t-pageStart__button--components t-pageStart__button--texts t-headerStart__image--logoWhite";
   grid-gap: 20px;
   align-items: end;
   justify-content: center;
@@ -426,12 +426,12 @@ nav li {
 @media only screen and (max-width: 1023px) {
   .t-pageStart {
     grid-template-columns: auto;
-    grid-template-areas: "t-pageStart__button--style" "t-pageStart__button--standards" "t-pageStart__button--components" "t-pageStart__button--texts" "t-headerStart__image--logoWhite";
+    grid-template-areas: "t-pageStart__button--styleGuide" "t-pageStart__button--standards" "t-pageStart__button--components" "t-pageStart__button--texts" "t-headerStart__image--logoWhite";
   }
 }
 
-.t-pageStart__button--style {
-  grid-area: t-pageStart__button--style;
+.t-pageStart__button--styleGuide {
+  grid-area: t-pageStart__button--styleGuide;
   text-decoration: none !important;
 }
 
