@@ -1,7 +1,7 @@
 @use "../core/variables" as *;
 
 %a-text__link--main {
-    color: $main-color;
+    color: $v-color--main;
     text-decoration: underline;
 }
 
@@ -17,7 +17,7 @@ a {
     }
 
     &:hover {
-        color: $secondary-color;
+        color: $v-color--secondary;
         text-decoration: underline;
     }
 }

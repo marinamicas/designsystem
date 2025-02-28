@@ -10,8 +10,8 @@
     position: fixed;
     left: 0;
     top: 0;
-    background: $light-color;
-    color: $dark-color;
+    background: $v-color--light;
+    color: $v-color--dark;
     box-shadow: none;
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -44,7 +44,7 @@ nav {
     padding: 1rem;
 
     a {
-        color: $light-color;
+        color: $v-color--light;
         text-decoration: none !important;
         font-size: 1.2rem;
     }

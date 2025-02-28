@@ -1,8 +1,8 @@
-.t-header__navigation {
+.t-headerNavigation {
     display: grid;
     grid-template-columns: 1fr repeat(3, max-content) 2fr auto;
     grid-template-areas: 
-        "t-image__navigation t-button__navigation--estilos t-button__navigation--padroes t-button__navigation--componentes . t-image__navigation--triangleRight"
+        "t-headerNavigation__image--logoWhite t-headerNavigation__button--styleGuide t-headerNavigation__button--standards t-headerNavigation__button--components . t-headerNavigation__image--triangle"
     ;
     grid-gap: 20px;
     height: max-content;
@@ -13,30 +13,30 @@
     @media only screen and (max-width: 800px) {
         grid-template-columns: repeat(3, max-content);
         grid-template-areas: 
-            "t-image__navigation t-button__navigation--estilos ." 
-            "t-button__navigation--padroes t-button__navigation--componentes t-image__navigation--triangleRight"
+            "t-headerNavigation__image--logoWhite t-headerNavigation__button--styleGuide ." 
+            "t-headerNavigation__button--standards t-headerNavigation__button--components t-headerNavigation__image--triangle"
         ;
     }
 
     @media only screen and (max-width: 615px) {
         grid-template-columns: repeat(2, max-content);
         grid-template-areas: 
-            "t-image__navigation ." 
-            "t-button__navigation--estilos t-button__navigation--padroes" 
-            "t-button__navigation--componentes t-image__navigation--triangleRight"
+            "t-headerNavigation__image--logoWhite ." 
+            "t-headerNavigation__button--styleGuide t-headerNavigation__button--standards" 
+            "t-headerNavigation__button--components t-headerNavigation__image--triangle"
         ;
     }
 
     @media only screen and (max-width: 560px) {
         grid-template-columns: 50px 61px 1fr;
         grid-template-areas: 
-            "t-button__navigation--burgerMenu t-image__navigation t-image__navigation--triangleRight"
+            "t-headerNavigation__button--burgerMenu t-headerNavigation__image--logoWhite t-headerNavigation__image--triangle"
         ;
     }
 }
 
-.t-image__navigation {
-    grid-area: t-image__navigation;
+.t-headerNavigation__image--logoWhite {
+    grid-area: t-headerNavigation__image--logoWhite;
     text-align: end;
 
     @media only screen and (max-width: 615px) {
@@ -48,26 +48,26 @@
     }
 }
 
-.t-button__navigation--estilos {
-    grid-area: t-button__navigation--estilos;
-    text-decoration: none !important;
-}
-
-.t-button__navigation--padroes {
-    grid-area: t-button__navigation--padroes;
-    text-decoration: none !important;
-}
-
-.t-button__navigation--componentes {
-    grid-area: t-button__navigation--componentes;
-}
-
-.t-image__navigation--triangleRight {
-    grid-area: t-image__navigation--triangleRight;
+.t-headerNavigation__image--triangle {
+    grid-area: t-headerNavigation__image--triangle;
     justify-self: end;
 }
 
-.t-button__navigation--burgerMenu {
-    grid-area: t-button__navigation--burgerMenu;
+.t-headerNavigation__button--styleGuide {
+    grid-area: t-headerNavigation__button--styleGuide;
+    text-decoration: none !important;
+}
+
+.t-headerNavigation__button--standards {
+    grid-area: t-headerNavigation__button--standards;
+    text-decoration: none !important;
+}
+
+.t-headerNavigation__button--components {
+    grid-area: t-headerNavigation__button--components;
+}
+
+.t-headerNavigation__button--burgerMenu {
+    grid-area: t-headerNavigation__button--burgerMenu;
     justify-self: center;
 }

@@ -1,9 +1,9 @@
-.t-page__start {
+.t-pageStart {
     display: grid;
     grid-template-columns: repeat(3, max-content);
     grid-template-areas: 
-        "t-button__start--estilos t-button__start--padroes t-image__start"
-        "t-button__start--componentes t-button__start--texto t-image__start"
+        "t-pageStart__button--style t-pageStart__button--standards t-headerStart__image--logoWhite"
+        "t-pageStart__button--components t-pageStart__button--texts t-headerStart__image--logoWhite"
     ;
     grid-gap: 20px;
     align-items: end;
@@ -13,33 +13,33 @@
     @media only screen and (max-width: 1023px) {
         grid-template-columns: auto;
         grid-template-areas: 
-            "t-button__start--estilos"
-            "t-button__start--padroes"
-            "t-button__start--componentes"
-            "t-button__start--texto"
-            "t-image__start"
+            "t-pageStart__button--style"
+            "t-pageStart__button--standards"
+            "t-pageStart__button--components"
+            "t-pageStart__button--texts"
+            "t-headerStart__image--logoWhite"
         ;
     }
 }
 
-.t-button__start--estilos {
-    grid-area: t-button__start--estilos;
+.t-pageStart__button--style {
+    grid-area: t-pageStart__button--style;
     text-decoration: none !important;
 }
 
-.t-button__start--padroes {
-    grid-area: t-button__start--padroes;
+.t-pageStart__button--standards {
+    grid-area: t-pageStart__button--standards;
     text-decoration: none !important;
 }
 
-.t-button__start--componentes {
-    grid-area: t-button__start--componentes;
+.t-pageStart__button--components {
+    grid-area: t-pageStart__button--components;
 }
 
-.t-button__start--texto {
-    grid-area: t-button__start--texto;
+.t-pageStart__button--texts {
+    grid-area: t-pageStart__button--texts;
 }
 
-.t-image__start {
-    grid-area: t-image__start;
+.t-headerStart__image--logoWhite {
+    grid-area: t-headerStart__image--logoWhite;
 }

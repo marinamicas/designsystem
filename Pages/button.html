@@ -16,8 +16,8 @@
     <div class="t-main">
 
         <!-- Header -->
-        <header class="t-header t-header__navigation">
-            <label for="menuToggle" class="t-button__navigation--burgerMenu m-button__burgerMenu--open" aria-label="Abrir menu">☰</label>
+        <header class="t-main__header t-headerNavigation">
+            <label for="menuToggle" class="t-headerNavigation__button--burgerMenu m-button__burgerMenu--open" aria-label="Abrir menu">☰</label>
             <input type="checkbox" id="menuToggle" hidden>
             
             <dialog class="o-burgerMenu__dialog">
@@ -40,8 +40,8 @@
                         </li>
                         <li>
                             <a href="components.html">
-                                <div class="m-button m-button--small u-border--transparentHighlightColor u-background--lightHighlightColor">
-                                    <img src="../images/text-componentes.png" class="u-image__navigation--dimensionComponent" alt="Texto com fundo verde escrito Componentes.">
+                                <div class="m-button m-button--small u-border--transparentColor u-background--highlightColor">
+                                    <img src="../images/text-componentes.png" class="u-image__textComponents--dimensionSmall" alt="Texto com fundo verde escrito Componentes.">
                                 </div>
                             </a>
                         </li>
@@ -49,34 +49,34 @@
                 </nav>
             </dialog>
 
-            <a href="../index.html" class="t-image__navigation">
+            <a href="../index.html" class="t-headerNavigation__image--logoWhite">
                 <img src="../images/logo-white.png" alt="Meu logo, da inspiração da tulipa.">
             </a>
 
-            <a href="style-guide.html" class="t-button__navigation--estilos">
+            <a href="style-guide.html" class="t-headerNavigation__button--styleGuide">
                 <div class="m-button m-button--small">
                     Guia de estilos
                 </div>
             </a>
 
-            <a href="standards.html" class="t-button__navigation--padroes">
+            <a href="standards.html" class="t-headerNavigation__button--standards">
                 <div class="m-button m-button--small">
                     Padrões
                 </div>
             </a>
 
-            <div class="t-button__navigation--componentes m-button__active--highlight">
-                <img src="../images/text-componentes.png" class="u-image__navigation--dimensionComponent" alt="Texto com fundo verde escrito Componentes.">
+            <div class="t-headerNavigation__button--components m-button--activeHighlight">
+                <img src="../images/text-componentes.png" class="u-image__textComponents--dimensionSmall" alt="Texto com fundo verde escrito Componentes.">
             </div>
             
-            <img src="../images/triangle-header.png" class="t-image__navigation--triangleRight" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
+            <img src="../images/triangle-header.png" class="t-headerNavigation__image--triangle" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
         </header>
 
         <!-- Page -->
-        <page class="t-page t-page__navigation">
+        <page class="t-main__page u-margin--leftRight">
             <h1>Button</h1>
 
-            <a href="components.html" class="u-link--right">Voltar para todos os componentes</a>
+            <a href="components.html" class="u-text--right">Voltar para todos os componentes</a>
 
             <p>Texto sobre o componente Button.</p>
 
@@ -87,12 +87,12 @@
                 <label for="tab2" class="o-tab">Desenvolvimento</label>
             </div>
         
-            <div class="o-content">
-                <div class="o-tab-content o-tab-content-1">
+            <div class="o-tab__line">
+                <div class="o-tab__content--hide o-tab__content--showFirst">
                     <h3>Design</h3>
                     <p>Conteúdo da aba de Design.</p>
                 </div>
-                <div class="o-tab-content o-tab-content-2">
+                <div class="o-tab__content--hide o-tab__content--showSecond">
                     <h3>Desenvolvimento</h3>
                     <p>Conteúdo da aba de Desenvolvimento.</p>
                 </div>
@@ -100,10 +100,10 @@
         </page>
 
         <!-- Footer -->
-        <footer class="t-footer">
-            <img src="../images/triangle-footer.png" class="t-image__triangle--left" alt="Dois triângulos da cor lilás posicionado artisticamente no canto inferior à esquerda para decorar a página" height="100">
+        <footer class="t-main__footer">
+            <img src="../images/triangle-footer.png" class="t-main__footer--imageTriangle" alt="Dois triângulos da cor lilás posicionado artisticamente no canto inferior à esquerda para decorar a página" height="100">
 
-            <span class="t-text a-text__footer">
+            <span class="t-main__footer--text a-text__footer">
                 desenvolvido por Marina Micas Jardim © <span class="u-text--mainColor">2024</span>
             </span>
         </footer>

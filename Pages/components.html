@@ -16,8 +16,8 @@
     <div class="t-main">
 
         <!-- Header -->
-        <header class="t-header t-header__navigation">
-            <label for="menuToggle" class="t-button__navigation--burgerMenu m-button__burgerMenu--open" aria-label="Abrir menu">☰</label>
+        <header class="t-main__header t-headerNavigation">
+            <label for="menuToggle" class="t-headerNavigation__button--burgerMenu m-button__burgerMenu--open" aria-label="Abrir menu">☰</label>
             <input type="checkbox" id="menuToggle" hidden>
             
             <dialog class="o-burgerMenu__dialog">
@@ -39,62 +39,62 @@
                             </a>
                         </li>
                         <li>
-                            <div class="m-button__active--highlight">
-                                <img src="../images/text-componentes.png" class="u-image__navigation--dimensionComponent" alt="Texto com fundo verde escrito Componentes.">
+                            <div class="m-button--activeHighlight">
+                                <img src="../images/text-componentes.png" class="u-image__textComponents--dimensionSmall" alt="Texto com fundo verde escrito Componentes.">
                             </div>
                         </li>
                     </ul>
                 </nav>
             </dialog>
 
-            <a href="../index.html" class="t-image__navigation">
+            <a href="../index.html" class="t-headerNavigation__image--logoWhite">
                 <img src="../images/logo-white.png" alt="Meu logo, da inspiração da tulipa.">
             </a>
 
-            <a href="style-guide.html" class="t-button__navigation--estilos">
+            <a href="style-guide.html" class="t-headerNavigation__button--styleGuide">
                 <div class="m-button m-button--small">
                     Guia de estilos
                 </div>
             </a>
 
-            <a href="standards.html" class="t-button__navigation--padroes">
+            <a href="standards.html" class="t-headerNavigation__button--standards">
                 <div class="m-button m-button--small">
                     Padrões
                 </div>
             </a>
 
-            <div class="t-button__navigation--componentes m-button__active--highlight">
-                <img src="../images/text-componentes.png" class="u-image__navigation--dimensionComponent" alt="Texto com fundo verde escrito Componentes.">
+            <div class="t-headerNavigation__button--components m-button--activeHighlight">
+                <img src="../images/text-componentes.png" class="u-image__textComponents--dimensionSmall" alt="Texto com fundo verde escrito Componentes.">
             </div>
             
-            <img src="../images/triangle-header.png" class="t-image__navigation--triangleRight" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
+            <img src="../images/triangle-header.png" class="t-headerNavigation__image--triangle" alt="Dois triângulos da cor lilás posicionado artisticamente no canto superior à direita para decorar a página">
         </header>
 
         <!-- Page -->
-        <page class="t-page t-page__component">
-            <h1 class="t-title__component">Componentes</h1>
+        <page class="t-main__page t-pageComponents">
+            <h1 class="t-pageComponents__title">Componentes</h1>
 
-            <p class="t-text__component">Texto sobre guia de componentes.</p>
+            <p class="t-pageComponents__text--footer">Texto sobre guia de componentes.</p>
 
-            <a href="button.html" class="t-button__component">
+            <a href="button.html" class="t-pageComponents__component--button">
                 <div class="m-button m-button--big">
                     Button
                 </div>
             </a>
 
-            <a href="icon-button.html" class="t-icon__component">
+            <a href="icon-button.html" class="t-pageComponents__component--iconButton">
                 <div class="m-button m-button--big">
                     Icon button
                 </div>
             </a>
             
-            <a href="chip.html" class="t-chip__component">
+            <a href="chip.html" class="t-pageComponents__component--chip">
                 <div class="m-button m-button--big">
                     Chip
                 </div>
             </a>
 
-            <a href="card.html" class="t-card__component">
+            <a href="card.html" class="t-pageComponents__component--card">
                 <div class="m-button m-button--big">
                     Card
                 </div>
@@ -102,10 +102,10 @@
         </page>
 
         <!-- Footer -->
-        <footer class="t-footer">
-            <img src="../images/triangle-footer.png" class="t-image__triangle--left" alt="Dois triângulos da cor lilás posicionado artisticamente no canto inferior à esquerda para decorar a página" height="100">
+        <footer class="t-main__footer">
+            <img src="../images/triangle-footer.png" class="t-main__footer--imageTriangle" alt="Dois triângulos da cor lilás posicionado artisticamente no canto inferior à esquerda para decorar a página" height="100">
 
-            <span class="t-text a-text__footer">
+            <span class="t-main__footer--text a-text__footer">
                 desenvolvido por Marina Micas Jardim © <span class="u-text--mainColor">2024</span>
             </span>
         </footer>

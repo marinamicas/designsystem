@@ -3,22 +3,22 @@
     grid-template-columns: auto;
     grid-template-rows: max-content;
     grid-template-areas: 
-        "t-header"
-        "t-page"
-        "t-footer"
+        "t-main__header"
+        "t-main__page"
+        "t-main__footer"
     ;
     height: calc(100vh - 20px);
 }
 
-.t-header {
-    grid-area: t-header;
+.t-main__header {
+    grid-area: t-main__header;
 }
 
-.t-page {
-    grid-area: t-page;
+.t-main__page {
+    grid-area: t-main__page;
     padding: 0 10%;
 }
 
-.t-footer {
-    grid-area: t-footer;
+.t-main__footer {
+    grid-area: t-main__footer;
 }

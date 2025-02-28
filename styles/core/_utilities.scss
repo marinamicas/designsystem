@@ -1,22 +1,22 @@
 @use "variables" as *;
 
-.u-border--transparentHighlightColor {
-    border-color: $highlight-color-transparent !important;
+.u-border--transparentColor {
+    border-color: $v-color--highlightTransparent !important;
 }
 
 .u-border--dashed {
     border-style: dashed !important;
 }
 
-.u-background--lightHighlightColor:hover {
-    background-color: $highlight-color-light !important;
+.u-background--highlightColor:hover {
+    background-color: $v-color--highlight !important;
 
     img {
         filter: brightness(0) invert(1);
     }
 }
 
-.u-image__start--dimensionComponent {
+.u-image__textComponents--dimensionBig {
     width: 254px;
     height: 55px;
 
@@ -26,7 +26,7 @@
     }
 }
 
-.u-image__navigation--dimensionComponent {
+.u-image__textComponents--dimensionSmall {
     width: 127px;
     height: 27px;
 }
@@ -36,11 +36,15 @@
 }
 
 .u-text--mainColor {
-    color: $main-color;
+    color: $v-color--main;
 }
 
-.u-link--right {
+.u-text--right {
     display: flex;
     justify-content: end;
     margin-top: -10px;
+}
+
+.u-margin--leftRight {
+    margin: 0 30px;
 }

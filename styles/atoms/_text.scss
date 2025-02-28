@@ -2,30 +2,30 @@
 @use "../core/font" as *;
 
 body {
-    color: $dark-color;
-    background-color: $light-color;
+    color: $v-color--dark;
+    background-color: $v-color--light;
 }
 
 body, p {
-    font-family: $font-main-text;
+    font-family: $v-font__text--main;
     line-height: 1.5;
 }
 
-.a-title__main {
-    font-size: $main-title-size;
-    font-weight: $main-title-weight;
-    line-height: $main-title-lineHeight;
-    letter-spacing: $main-title-letterSpacing;
-    color: $main-color;
+.a-title--main {
+    font-size: $v-size__title--main;
+    font-weight: $v-weight__title--main;
+    line-height: $v-lineHeight__title--main;
+    letter-spacing: $v-letterSpacing__title--main;
+    color: $v-color--main;
 }
 
-.a-text__highlight {
-    font-size: $highlight-text-size;
-    line-height: $highlight-text-lineHeight;
-    letter-spacing: $highlight-text-letterSpacing;
+.a-text--highlight {
+    font-size: $v-size__text--highlight;
+    line-height: $v-lineHeight__text--highlight;
+    letter-spacing: $v-letterSpacing__text--highlight;
 }
 
 .a-text__footer {
-    font-size: $footer-text-size;
-    font-weight: $footer-text-weight;
+    font-size: $v-footer__text--size;
+    font-weight: $v-footer__text--weight;
 }

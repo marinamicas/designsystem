@@ -1,8 +1,8 @@
 @use "../core/variables" as *;
 
 %m-button__main {
-    border: 6px solid $light-main-color;
-    color: $main-color;
+    border: 6px solid $v-color--mainLight;
+    color: $v-color--main;
     @extend %m-button__general;
 }
 
@@ -13,13 +13,13 @@
     padding: 20px;
     box-sizing: border-box;
     border-radius: 9px;
-    font-family: $font-highlighted-text;
+    font-family: $v-font__text--highlight;
     font-weight: bold;
 }
 
 .m-button {
     @extend %m-button__main;
-    background-color: $light-color;
+    background-color: $v-color--light;
 
     &--big {
         width: 386px;
@@ -39,28 +39,28 @@
     }
 
     &:hover {
-        background-color: $main-color;
-        border: 6px solid $main-color;
-        color: $light-color;
+        background-color: $v-color--main;
+        border: 6px solid $v-color--main;
+        color: $v-color--light;
         font-weight: 500;
 
         a {
-            color: $light-color;
+            color: $v-color--light;
         }
     }
 }
 
-.m-button__active {
+.m-button--active {
     @extend %m-button__main;
-    background-color: $light-main-color;
+    background-color: $v-color--mainLight;
     width: 185px;
     height: 58px;
     font-size: 24px;
 }
 
-.m-button__active--highlight {
+.m-button--activeHighlight {
     @extend %m-button__general;
-    background-color: $highlight-color-transparent;
+    background-color: $v-color--highlightTransparent;
     width: 185px;
     height: 58px;
 
@@ -72,7 +72,7 @@
 %m-button__burgerMenu {
     background: none;
     border: none;
-    color: $secondary-color;
+    color: $v-color--secondary;
     font-size: 1.5rem;
     cursor: pointer;
 }

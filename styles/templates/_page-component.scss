@@ -1,11 +1,11 @@
-.t-page__component {
+.t-pageComponents {
     display: grid;
     grid-template-columns: repeat(2, max-content);
     grid-template-areas: 
-        "t-title__component t-title__component"
-        "t-text__component t-text__component"
-        "t-button__component t-icon__component"
-        "t-chip__component t-card__component"
+        "t-pageComponents__title t-pageComponents__title"
+        "t-pageComponents__text--footer t-pageComponents__text--footer"
+        "t-pageComponents__component--button t-pageComponents__component--iconButton"
+        "t-pageComponents__component--chip t-pageComponents__component--card"
     ;
     grid-gap: 20px;
     align-items: end;
@@ -15,43 +15,43 @@
     @media only screen and (max-width: 1023px) {
         grid-template-columns: auto;
         grid-template-areas: 
-            "t-title__component"
-            "t-text__component"
-            "t-button__component"
-            "t-icon__component"
-            "t-chip__component"
-            "t-card__component"
+            "t-pageComponents__title"
+            "t-pageComponents__text--footer"
+            "t-pageComponents__component--button"
+            "t-pageComponents__component--iconButton"
+            "t-pageComponents__component--chip"
+            "t-pageComponents__component--card"
         ;
     }
 }
 
-.t-title__component {
-    grid-area: t-title__component;
+.t-pageComponents__title {
+    grid-area: t-pageComponents__title;
     text-decoration: none !important;
 }
 
-.t-text__component {
-    grid-area: t-text__component;
+.t-pageComponents__text--footer {
+    grid-area: t-pageComponents__text--footer;
     text-decoration: none !important;
     margin-top: -15px;
 }
 
-.t-button__component {
-    grid-area: t-button__component;
+.t-pageComponents__component--button {
+    grid-area: t-pageComponents__component--button;
     text-decoration: none !important;
 }
 
-.t-icon__component {
-    grid-area: t-icon__component;
+.t-pageComponents__component--iconButton {
+    grid-area: t-pageComponents__component--iconButton;
     text-decoration: none !important;
 }
 
-.t-chip__component {
-    grid-area: t-chip__component;
+.t-pageComponents__component--chip {
+    grid-area: t-pageComponents__component--chip;
     text-decoration: none !important;
 }
 
-.t-card__component {
-    grid-area: t-card__component;
+.t-pageComponents__component--card {
+    grid-area: t-pageComponents__component--card;
     text-decoration: none !important;
 }

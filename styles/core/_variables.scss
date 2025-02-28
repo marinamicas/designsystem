@@ -1,29 +1,29 @@
 /* Color */
-$main-color: #6E22B5;
-$secondary-color: #2C0E48;
-$light-main-color: #F0E8F7;
+$v-color--main: #6E22B5;
+$v-color--secondary: #2C0E48;
+$v-color--mainLight: #F0E8F7;
 
-$light-color: #FCFCFC;
-$dark-color: #1B1B1B;
+$v-color--light: #FCFCFC;
+$v-color--dark: #1B1B1B;
 
-$highlight-color-light: #6EA44F;
-$highlight-color-transparent: rgba(110, 164, 79, 0.3);
+$v-color--highlight: #6EA44F;
+$v-color--highlightTransparent: rgba(110, 164, 79, 0.3);
 
 
 /* Size, weight, line-height e letter-spacing */
-$main-title-size: 36px;
-$main-title-weight: 300;
-$main-title-lineHeight: 43.5px;
-$main-title-letterSpacing: 2.28%;
+$v-size__title--main: 36px;
+$v-weight__title--main: 300;
+$v-lineHeight__title--main: 43.5px;
+$v-letterSpacing__title--main: 2.28%;
 
-$highlight-text-size: 20px;
-$highlight-text-lineHeight: 28.5px;
-$highlight-text-letterSpacing: 2.28%;
+$v-size__text--highlight: 20px;
+$v-lineHeight__text--highlight: 28.5px;
+$v-letterSpacing__text--highlight: 2.28%;
 
-$footer-text-size: 14px;
-$footer-text-weight: 500;
+$v-footer__text--size: 14px;
+$v-footer__text--weight: 500;
 
 
 /* Font */
-$font-highlighted-text: 'Londrina Outline';
-$font-main-text: 'Raleway';
+$v-font__text--highlight: 'Londrina Outline';
+$v-font__text--main: 'Raleway';

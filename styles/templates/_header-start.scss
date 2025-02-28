@@ -1,8 +1,8 @@
-.t-header__start {
+.t-headerStart {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-areas: 
-        "t-image__start t-title__start t-image__start--triangleRight"
+        "t-headerStart__image--logoWhite t-headerStart__title t-headerStart__image--triangle"
     ;
     margin: 20px;
     justify-content: space-between;
@@ -11,8 +11,8 @@
     @media only screen and (max-width: 1023px) {
         grid-template-columns: repeat(2, auto);
         grid-template-areas: 
-            "t-image__start t-title__start"
-            ". t-image__start--triangleRight"
+            "t-headerStart__image--logoWhite t-headerStart__title"
+            ". t-headerStart__image--triangle"
         ;
         align-items: center;
         column-gap: 20px;
@@ -20,18 +20,18 @@
     }
 }
 
-.t-image__start {
-    grid-area: t-image__start;
+.t-headerStart__image--logoWhite {
+    grid-area: t-headerStart__image--logoWhite;
 }
 
-.t-title__start {
-    grid-area: t-title__start;
-}
-
-.t-image__start--triangleRight {
-    grid-area: t-image__start--triangleRight;
+.t-headerStart__image--triangle {
+    grid-area: t-headerStart__image--triangle;
     
     @media only screen and (max-width: 1023px) {
         justify-self: end;
     }
+}
+
+.t-headerStart__title {
+    grid-area: t-headerStart__title;
 }

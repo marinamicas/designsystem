@@ -13,9 +13,9 @@
 }
 
 input[type="radio"]:not(:checked) + .o-tab:hover {
-    background-color: $main-color;
+    background-color: $v-color--main;
     border-radius: 9px 9px 0 0;
-    color: $light-color;
+    color: $v-color--light;
     cursor: pointer;
 }
 
@@ -24,22 +24,22 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label {
-    background-color: $light-main-color;
+    background-color: $v-color--mainLight;
     border: none;
     border-radius: 9px 9px 0 0;
     font-weight: 600;
 }
 
-.o-content {
-    border-top: 1px solid $main-color;
+.o-tab__line {
+    border-top: 1px solid $v-color--main;
     padding: 15px;
 }
 
-.o-tab-content {
+.o-tab__content--hide {
     display: none;
 }
 
-.o-tabs:has(#tab1:checked) ~ .o-content .o-tab-content-1,
-.o-tabs:has(#tab2:checked) ~ .o-content .o-tab-content-2 {
+.o-tabs:has(#tab1:checked) ~ .o-tab__line .o-tab__content--showFirst,
+.o-tabs:has(#tab2:checked) ~ .o-tab__line .o-tab__content--showSecond {
     display: block;
 }
