@@ -289,6 +289,14 @@ nav li {
   margin: 2rem 0;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 10px;
+}
+
 /* Sistemas de grids e alinhamentos de organismos */
 .t-main {
   display: grid;
